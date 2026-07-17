@@ -1,0 +1,107 @@
+<!--
+  TODO — UPDATE BEFORE SHIPPING ADS/BILLING.
+  This policy currently says "no data leaves your device." The build plan
+  defers monetization (AdMob banner/interstitial + Play Billing) to the end
+  of the project — see the ClipIt Design Spec §Monetization. The moment
+  that build ships, this becomes false: AdMob collects the advertising ID
+  and device/network info, and Play Billing shares purchase data with
+  Google. Before that build goes out: add a data-collection section here,
+  flip Play Console's Data Safety form off "No data collected," and update
+  any in-app copy making the same "everything stays local" claim.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clip It — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #14170F;
+      --surface: #1C2016;
+      --border: #2E3425;
+      --text: #E8E6DF;
+      --muted: #9BA08E;
+      --accent: #8A9A5B;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      padding: 24px;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 24px 0 64px; }
+    h1 { font-size: 1.75rem; letter-spacing: 0.02em; margin-bottom: 4px; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 {
+      font-size: 1.15rem;
+      margin: 32px 0 8px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    p, li { color: var(--text); margin-bottom: 12px; }
+    ul { padding-left: 24px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .summary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-bottom: 8px;
+    }
+    .back { display: inline-block; margin-bottom: 24px; color: var(--muted); font-size: 0.9rem; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 16px; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">&larr; NorthForge Dev</a>
+    <h1>Clip It — Privacy Policy</h1>
+    <p class="meta">Effective date: July 17, 2026</p>
+
+    <div class="summary">
+      <p><strong>The short version:</strong> Clip It does not collect, store, or upload any personal information, and it does not upload your screen recordings anywhere. There are no accounts and no analytics. Everything — the rolling buffer and every clip you save — stays on your device.</p>
+    </div>
+
+    <h2>Who we are</h2>
+    <p>Clip It is a screen-clip recorder for Android, developed and published by NorthForge Dev. You can reach us at <a href="mailto:northforgedev.io@gmail.com">northforgedev.io@gmail.com</a>.</p>
+
+    <h2>What Clip It records</h2>
+    <p>Clip It records your device's screen and, if you enable it, audio (app/game sound and/or your microphone) into a short rolling buffer held in the app's private cache while it's armed. Nothing is saved permanently until you tap Save (via the in-app button, the floating bubble, the notification action, or — if you enable it — the voice trigger). Saved clips are written to <strong>Movies/ClipIt</strong> on your device via Android's standard MediaStore and are visible like any other video you record.</p>
+    <p>None of this — the rolling buffer or your saved clips — is ever transmitted to us, to a server we control, or to any third party. Clip It has no backend of its own.</p>
+
+    <h2>Microphone and voice trigger</h2>
+    <p>The microphone is off by default and only used if you turn it on, for two independent, optional purposes:</p>
+    <ul>
+      <li><strong>Including your commentary</strong> in the audio track of saved clips.</li>
+      <li><strong>Voice trigger</strong> — saying "clip it" or "clip that" to save a clip hands-free. This uses Android's built-in on-device speech recognizer (available on Android 12 and newer): recognition happens entirely on your device, and no audio is sent anywhere for this feature, including to Google. It is off by default and requires you to opt in.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <p>Clip It requests the following Android permissions, each tied to a feature you control:</p>
+    <ul>
+      <li><strong>Screen recording (MediaProjection)</strong> — required for the core clipping feature. Android shows its own consent dialog every time you arm; this can't be skipped or bypassed by any app.</li>
+      <li><strong>Microphone</strong> — only if you enable audio commentary or the voice trigger.</li>
+      <li><strong>Display over other apps</strong> — only if you enable the floating save bubble.</li>
+      <li><strong>Notifications</strong> — used for the persistent "buffering" notification (with Save/Stop actions) required while a foreground service is capturing, and for occasional status messages (e.g. low storage, or capture stopping unexpectedly).</li>
+    </ul>
+    <p>Clip It does not request access to your contacts, location, files outside its own clips, or any other sensitive data.</p>
+
+    <h2>DRM and protected content</h2>
+    <p>Some apps opt out of screen or audio capture, and DRM-protected video is never delivered to any app, including Clip It — in those cases the clip shows black video or silent audio instead of an error. This is an Android platform restriction, not a Clip It bug.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Clip It collects no personal information from anyone, including children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If Clip It's data practices ever change — for example, when ads or in-app purchases are introduced — this policy will be updated before that version ships, and the effective date above will change.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or about Clip It? Email us at <a href="mailto:northforgedev.io@gmail.com">northforgedev.io@gmail.com</a>.</p>
+  </main>
+</body>
+</html>
