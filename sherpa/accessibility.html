@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sherpa — Accessibility Statement</title>
+  <style>
+    :root {
+      --bg: #14170F;
+      --surface: #1C2016;
+      --border: #2E3425;
+      --text: #E8E6DF;
+      --muted: #9BA08E;
+      --accent: #8A9A5B;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      padding: 24px;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 24px 0 64px; }
+    h1 { font-size: 1.75rem; letter-spacing: 0.02em; margin-bottom: 4px; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 {
+      font-size: 1.15rem;
+      margin: 32px 0 8px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    p, li { color: var(--text); margin-bottom: 12px; }
+    ul { padding-left: 24px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .summary {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-bottom: 8px;
+    }
+    .back { display: inline-block; margin-bottom: 24px; color: var(--muted); font-size: 0.9rem; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 16px; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">&larr; NorthForge Dev</a>
+    <h1>Sherpa — Accessibility Statement</h1>
+    <p class="meta">Effective date: August 24, 2026</p>
+
+    <div class="summary">
+      <p><strong>The short version:</strong> Sherpa is built by one developer, not a large team, but accessibility is something we actively work on rather than treat as an afterthought. Screen-reader support, color contrast, and touch-target sizing are reviewed on an ongoing basis. If something in the app doesn't work well with the accessibility tools you use, we want to know — see Contact below.</p>
+    </div>
+
+    <h2>What Sherpa currently supports</h2>
+    <ul>
+      <li>Labels and roles for screen readers (Android TalkBack) on navigation, buttons, list items, form fields, and toggles throughout the app</li>
+      <li>A minimum 44&times;44dp touch target on every interactive control</li>
+      <li>Text and interface colors checked against WCAG 2.1 AA contrast guidelines, in both the dark and light themes</li>
+      <li>Support for your device's dark/light theme preference, with a manual override in Settings</li>
+      <li>Full interface translation into 8 languages, selectable independently of your device's language</li>
+    </ul>
+
+    <h2>Known limitations</h2>
+    <p>Raid Tool's drag-and-drop tile grid is a visual, gesture-driven layout tool and does not yet have a non-drag alternative for screen-reader users. Every item Raid Tool surfaces is also reachable through Item Search and StashTrak, which are fully screen-reader accessible — Raid Tool itself is on our list to improve.</p>
+
+    <h2>Standard we're working toward</h2>
+    <p>We use the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA as our reference point, adapted to what applies to a native Android app rather than a website. This is a statement of ongoing effort, not a certification of full conformance.</p>
+
+    <h2>Contact</h2>
+    <p>If you use an assistive technology and run into something that doesn't work, tell us — screen size, Android version, and what you were trying to do all help. Email <a href="mailto:northforgedev.io@gmail.com">northforgedev.io@gmail.com</a> or use the feedback link in the app's Settings screen.</p>
+
+    <h2>Changes to this statement</h2>
+    <p>As Sherpa's accessibility support changes, this page will be updated to reflect it.</p>
+
+    <footer>
+      <p>Sherpa is an unofficial, fan-made app and is not affiliated with, endorsed by, or connected to Battlestate Games. Escape from Tarkov is a trademark of Battlestate Games.</p>
+    </footer>
+  </main>
+</body>
+</html>
