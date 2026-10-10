@@ -1,12 +1,12 @@
 <!--
-  Leo privacy policy — WRITTEN 2026-09-21 for the 1.0 closed test.
-  Truthful for the current build: no accounts, no analytics, no ads, no SDKs that
-  collect anything. Two network destinations only: image files on gta.wiki, and this
-  site (northforgedev.github.io/leo/) for content-bundle updates.
-  What WOULD force an edit: adding AdMob (copy the Advertising / consent / permissions
-  sections from ../sitrep/privacy.html), adding any analytics or crash reporting, or
-  adding a new network destination. In-app, the matching claim lives in
-  SettingsScreen.tsx ("Nothing you do in Leo leaves your device").
+  Leo privacy policy — WRITTEN 2026-09-21 for the 1.0 closed test; REVISED 2026-10-10
+  for the production build, which adds Google AdMob (banner, interstitial, and the
+  opt-in rewarded "Lay Low" ad-free time). The Advertising / consent / permissions
+  sections mirror ../sitrep/privacy.html.
+  Network destinations: image files on gta.wiki, this site for content-bundle updates,
+  and Google's ad servers. What WOULD force another edit: any analytics or crash
+  reporting, or a new network destination. In-app, the matching claim lives in
+  SettingsScreen.tsx ("Your saves and progress never leave your device").
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -60,18 +60,33 @@
   <main>
     <a class="back" href="../">&larr; NorthForge Dev</a>
     <h1>Leo — Privacy Policy</h1>
-    <p class="meta">Effective date: September 21, 2026</p>
+    <p class="meta">Effective date: October 10, 2026 &middot; Previous version: September 21, 2026</p>
 
     <div class="summary">
-      <p><strong>The short version:</strong> Leo has no accounts, no sign-in, no ads, no analytics, and no server of its own. Everything you do in the app stays on your device. The only things Leo downloads are game images and content updates, and it sends nothing about you in return.</p>
+      <p><strong>The short version:</strong> Leo has no accounts, no sign-in, no analytics, and no server of its own, and everything you save in the app stays on your device. Leo does show ads through Google AdMob, and AdMob collects some information — including your device's advertising ID — in order to serve them. That is the only data collection in the app, and it is described in full below.</p>
     </div>
 
     <h2>Who we are</h2>
     <p>Leo is an unofficial companion app for the Grand Theft Auto games, developed and published by NorthForge Dev. You can reach us at <a href="mailto:northforgedev.io@gmail.com">northforgedev.io@gmail.com</a>.</p>
 
-    <h2>Information we collect</h2>
-    <p>None. Leo has no user accounts, no sign-in, no advertising, no analytics or crash-reporting services, and no server of its own. We do not receive your in-app activity, and we have no way to identify you.</p>
-    <p>We do receive aggregate, anonymous statistics from Google Play, which reports installs, uninstalls, ratings, and crash counts to every developer. These do not identify you to us individually.</p>
+    <h2>Information we collect ourselves</h2>
+    <p>None. Leo has no user accounts, no sign-in, no analytics or crash-reporting services, and no server of its own. We do not receive your in-app activity, and we have no way to identify you.</p>
+    <p>We do receive aggregate, anonymous statistics from two places we do not control: Google Play reports installs, uninstalls, ratings, and crash counts to every developer, and Google AdMob reports ad impressions and earnings. Neither identifies you to us individually.</p>
+
+    <h2>Advertising</h2>
+    <p>Leo displays advertisements served by <strong>Google AdMob</strong>: a banner, an occasional full-screen ad between screens, and an optional video ad you can choose to watch in exchange for a few hours without ads. To select and measure those ads, the AdMob SDK collects information from your device, which may include:</p>
+    <ul>
+      <li>Your device's <strong>advertising ID</strong> — a resettable identifier Android provides specifically for advertising</li>
+      <li>Your IP address, and the approximate location derived from it</li>
+      <li>Device and app information such as device model, operating system version, language, and the app you are using</li>
+      <li>Ad interaction data — which ads were shown to you, and whether you tapped them</li>
+    </ul>
+    <p>This information goes to Google, not to us. Its use is governed by Google's own policies: see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use our services</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+    <p>You can reset or delete your advertising ID at any time in Android's <em>Settings &rarr; Privacy &rarr; Ads</em>, which also offers an option to opt out of ad personalisation device-wide.</p>
+
+    <h2>Your consent choices</h2>
+    <p>If you are in the European Economic Area, the United Kingdom, Switzerland, or a US state with an applicable privacy law, Leo shows you Google's consent form after the intro the first time you open the app, and asks what you agree to before any ad is requested. You can change that choice at any time from <em>Settings &rarr; Ad privacy options</em> inside the app.</p>
+    <p>If you decline personalised ads, Leo still shows ads — they are simply chosen without using your data for personalisation.</p>
 
     <h2>Data stored on your device</h2>
     <p>Leo saves your in-app activity locally so the app works the way you left it. This includes:</p>
@@ -79,33 +94,36 @@
       <li>Which game you last had selected (GTA V or GTA VI)</li>
       <li>Saved (bookmarked) characters, missions, vehicles, weapons, and locations</li>
       <li>Your story progress and Spoiler Shield settings, per game</li>
+      <li>When you last saw a full-screen ad, and how much ad-free time you have earned, so ads stay as infrequent as promised</li>
       <li>A copy of the app's game content so it works without a connection</li>
     </ul>
-    <p>This data never leaves your device. It is not transmitted to us or to anyone else, and it is excluded from Android's cloud backup. You can erase all of it at any time by clearing the app's data in Android settings or by uninstalling the app.</p>
+    <p>This data never leaves your device. It is not transmitted to us, to Google, or to anyone else, and it is excluded from Android's cloud backup. You can erase all of it at any time by clearing the app's data in Android settings or by uninstalling the app.</p>
 
     <h2>Internet access</h2>
-    <p>Leo uses your internet connection for two purposes only:</p>
+    <p>Leo uses your internet connection for three purposes:</p>
     <ul>
       <li><strong>Images.</strong> Pictures of characters, vehicles, weapons, missions, and places are loaded from the community-run <a href="https://gta.wiki" rel="noopener">GTA Wiki</a> (gta.wiki) and cached on your device so each one is downloaded once.</li>
       <li><strong>Content updates.</strong> About once a day, Leo checks this website (northforgedev.github.io) for a newer version of its game content and downloads it if there is one.</li>
+      <li><strong>Advertisements.</strong> Ads are requested from Google as described above.</li>
     </ul>
-    <p>Like any request made over the internet, these downloads necessarily expose your device's IP address to the server that answers them. Leo sends no personal information, identifiers, or usage data with these requests, and we never see the image requests at all.</p>
+    <p>Like any request made over the internet, these downloads necessarily expose your device's IP address to the server that answers them. Leo sends no personal information, identifiers, or usage data with the image and content requests, and we never see the image requests at all.</p>
 
     <h2>Permissions</h2>
-    <p>Leo requests only one Android permission:</p>
+    <p>Leo itself requests only one Android permission:</p>
     <ul>
-      <li><strong>Internet</strong> — for the images and content updates described above</li>
+      <li><strong>Internet</strong> — for the images, content updates, and ads described above</li>
     </ul>
+    <p>The Google AdMob SDK adds a small set of standard advertising permissions of its own: the <strong>advertising ID</strong> permission, Android's Privacy Sandbox ad-services permissions, and network-state and background-work permissions it uses to request and cache ads. These are install-time permissions — Android grants them automatically and never prompts you.</p>
     <p>Leo does not request access to your location, camera, microphone, contacts, files, or any other sensitive capability.</p>
 
     <h2>Third-party links</h2>
-    <p>Every entry in Leo links to its source page on <a href="https://gta.wiki" rel="noopener">gta.wiki</a>, whose text is available under the Creative Commons BY-SA licence. These links open in your device's browser, and the sites they lead to are governed by their own privacy policies, not this one.</p>
+    <p>Every entry in Leo links to its source page on <a href="https://gta.wiki" rel="noopener">gta.wiki</a>, whose text is available under the Creative Commons BY-SA licence. Advertisements also link to their advertisers' own destinations. These links open in your device's browser, and the sites they lead to are governed by their own privacy policies, not this one.</p>
 
     <h2>Children's privacy</h2>
-    <p>Leo is a companion app for games rated for mature audiences and is not directed at children. We do not knowingly collect personal information from anyone, children included.</p>
+    <p>Leo is a companion app for games rated for mature audiences, is distributed to an audience of 18 and over, and is not directed at children. We do not knowingly collect personal information from children, and Leo is not configured for child-directed advertising treatment. If you believe a child has used the app, resetting the device's advertising ID as described above will clear the identifier associated with that use.</p>
 
     <h2>Changes to this policy</h2>
-    <p>If Leo's data practices change — for example, if a future version shows advertisements — this policy will be updated before that version ships, and the effective date above will change. Material changes will also be noted in the app's release notes.</p>
+    <p>If Leo's data practices change again, this policy will be updated before that version ships, and the effective date above will change. Material changes will also be noted in the app's release notes.</p>
 
     <h2>Contact</h2>
     <p>Questions about this policy or about Leo? Email us at <a href="mailto:northforgedev.io@gmail.com">northforgedev.io@gmail.com</a>.</p>
